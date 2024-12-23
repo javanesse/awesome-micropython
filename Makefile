@@ -5,13 +5,10 @@ install:
 	pip install mkdocs
 	pip install mkdocs-minify-plugin
 	pip install mkdocs-awesome-pages-plugin
-
-link:
-	ln -sf $(BASEDIR)/README.md $(DOCDIR)/index.md
-	ln -sf $(BASEDIR)/logo.svg $(DOCDIR)/img/logo.svg
+	pip install mkdocs-material
+	pip install mkdocs-include-markdown-plugin
 
 serve:
-	$(MAKE) link
 	mkdocs serve
 
 deploy:
